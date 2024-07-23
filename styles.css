@@ -1,0 +1,299 @@
+
+body {
+    padding-top: 56px; /* Height of the navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+ /* Ensure sections do not have additional top margin or padding */
+section {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #343a40;
+    margin-top: 30px;
+}
+
+p, ul, li {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+}
+/* Ensure all infoboxes have the same height */
+.info-box {
+    min-height: 300px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+}
+
+/*Styles for intro section*/
+#intro {
+    min-height: 100vh; /* Ensure the section takes up the full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Add a gradient background */
+}
+
+#intro img.rounded-circle {
+    border-radius: 50%;
+    margin-top:-20px;
+    width: 400px; /* Ensure the profile picture is the correct size */
+    height: 400px;
+    object-fit: cover;
+    border: 4px solid #343a40; /* Add a dark border to the image */
+}
+
+#intro h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+#intro p.lead {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#intro .btn {
+    margin: 5px;
+}
+
+#intro .social-icons a {
+    margin: 0 10px;
+}
+/* Resume Button */
+.resume-button {
+    background-color: #343a40 !important; /* Match the navbar color */
+    border-color: #343a40 !important; /* Match the navbar color */
+    color: #ffffff !important; /* White text color */
+}
+
+.resume-button:hover {
+    background-color: #495057 !important; /* Slightly lighter color on hover */
+    border-color: #495057 !important; /* Slightly lighter color on hover */
+}
+
+/* Custom styles for the About section */
+#about {
+    padding: 60px 0;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#about .row.align-items-center {
+    padding-left: 30px; /* Adjust this value to increase or decrease padding */
+    padding-right: 30px; /* Adjust this value to increase or decrease padding */
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #6c757d; /* Light grey border */
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+#about .info-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about .info-box h4 {
+    margin-bottom: 10px;
+}
+
+/* Custom styles for the Projects section */
+#projects {
+    padding: 60px 0;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects .card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+#projects .card:hover {
+    transform: translateY(-10px);
+}
+
+#projects .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#projects .card-text {
+    font-size: 1rem;
+}
+
+#projects .btn {
+    margin: 5px;
+}
+#projects .card-img-top {
+    width: 150px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+}
+/* Custom styles for the Projects section */
+#projects .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects .col-md-4 {
+    display: flex;
+    margin-bottom: 1rem; /* Adjust spacing between the cards */
+}
+
+#projects .card {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects .card-body .card-title {
+    margin-bottom: 0.5rem; /* Adjust spacing */
+}
+
+#projects .card-body .card-text {
+    flex-grow: 1;
+}
+
+#projects .card-body .btn {
+    margin-top: 0.5rem; /* Adjust button spacing */
+}
+
+
+
+/* Custom styles for the Skills section */
+#skills {
+    padding: 60px 0;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#skills .info-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 50px; /* Add more margin at the bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Reduce the width */
+    margin: 0 auto 20px auto; /* Center align the box and add margin at the bottom */
+}
+
+#skills .info-box h4 {
+    margin-bottom: 10px;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills ul li {
+    margin-bottom: 5px;
+}
+
+/* Custom styles for the Contact section */
+#contact {
+    padding: 60px 0;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact a.btn {
+    margin: 10px;
+}
+
+/* Custom styles for the Resume section */
+#resume {
+    padding: 60px 0;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#resume .btn {
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #6c757d;
+}
+
+footer ul li a:hover {
+    color: #343a40;
+}
+html{
+    scroll-behavior: auto;
+}
+
+
+/* Navigation Bar */
+#mainNavbar {
+    background-color: #343a40 !important; /* Dark grey color with !important to override any other styles */
+
+}
+
+#mainNavbar .navbar-brand,
+#mainNavbar .nav-link {
+    color: #ffffff !important; /* White text color for contrast with !important */
+}
+
+#mainNavbar .nav-link:hover {
+    color: #dcdcdc !important; /* Lighter color when hovering with !important */
+}
+

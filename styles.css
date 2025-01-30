@@ -250,6 +250,13 @@ p, ul, li {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#awards {
+    padding: 60px 0;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 #resume .btn {
     margin: 20px 0;

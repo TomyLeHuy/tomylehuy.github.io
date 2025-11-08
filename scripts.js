@@ -48,10 +48,12 @@ $(document).ready(function () {
   $(window).on("scroll", revealOnScroll);
   revealOnScroll(); // Initial check
 
-  // Add parallax effect to intro section
+  // Subtle parallax effect to intro section (professional)
   $(window).on("scroll", function () {
     var scrolled = $(window).scrollTop();
-    $("#intro").css("transform", "translateY(" + scrolled * 0.5 + "px)");
+    if (scrolled < 500) {
+      $("#intro").css("transform", "translateY(" + scrolled * 0.15 + "px)");
+    }
   });
 
   // Animate skill bars on scroll

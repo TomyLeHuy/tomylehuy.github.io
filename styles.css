@@ -211,13 +211,13 @@ strong, b {
     opacity: 1;
 }
 
-#intro .social-icons img {
-    filter: brightness(0) invert(1);
+#intro .social-icons svg {
     transition: all 0.3s ease;
 }
 
-#intro .social-icons a:hover img {
-    filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(236, 240, 241, 0.3));
+#intro .social-icons a:hover svg {
+    filter: drop-shadow(0 2px 8px rgba(236, 240, 241, 0.3));
+    transform: scale(1.1);
 }
 /* Resume Button */
 .resume-button {
@@ -620,8 +620,8 @@ strong, b {
     color: #ECF0F1 !important;
 }
 
-#contact a.btn img {
-    filter: brightness(0) invert(1);
+#contact a.btn svg {
+    transition: all 0.3s ease;
 }
 
 /* Custom styles for the Resume section */

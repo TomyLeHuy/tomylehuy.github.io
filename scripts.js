@@ -75,10 +75,10 @@ $(document).ready(function () {
   // Add smooth hover effect for cards
   $(".card").hover(
     function () {
-      $(this).find(".card-title").css("color", "#667eea");
+      $(this).find(".card-title").css("color", "#7F8C8D");
     },
     function () {
-      $(this).find(".card-title").css("color", "#1a202c");
+      $(this).find(".card-title").css("color", "#2C3E50");
     }
   );
 

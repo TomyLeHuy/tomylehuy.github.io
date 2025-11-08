@@ -358,18 +358,18 @@ strong, b {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: #2C3E50;
-    border: none;
-    color: #ECF0F1;
+    background: #2C3E50 !important;
+    border: none !important;
+    color: #ECF0F1 !important;
     transition: all 0.3s ease;
     font-size: 0.85rem;
 }
 
 #projects .btn:hover {
-    background: #34495E;
+    background: #34495E !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
-    color: #ECF0F1;
+    color: #ECF0F1 !important;
 }
 
 #projects .card-img-top {
@@ -475,11 +475,125 @@ strong, b {
     font-weight: bold;
 }
 
-/* Custom styles for the Contact section */
-#contact {
+/* Custom styles for the Awards section */
+#awards {
     padding: 70px 0;
     background: #f8f9fa;
     margin: 0;
+}
+
+#awards h2 {
+    text-align: left;
+    margin-left: 15px;
+}
+
+#awards .card {
+    border: 1px solid #e0e0e0;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+#awards .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+    border-color: #2C3E50;
+}
+
+#awards .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2C3E50;
+    font-family: 'Roboto Slab', serif;
+}
+
+#awards .card-text {
+    font-size: 0.95rem;
+    color: #34495E;
+    line-height: 1.6;
+}
+
+#awards .btn {
+    margin: 10px 0;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #2C3E50 !important;
+    border: none !important;
+    color: #ECF0F1 !important;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+#awards .btn:hover {
+    background: #34495E !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
+    color: #ECF0F1 !important;
+}
+
+#awards .award-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#awards .award-icon svg {
+    transition: transform 0.3s ease;
+}
+
+#awards .card:hover .award-icon svg {
+    transform: scale(1.1);
+}
+
+#awards .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#awards .col-md-4 {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#awards .card {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#awards .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#awards .card-body .card-title {
+    margin-bottom: 15px;
+}
+
+#awards .card-body .card-text {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+#awards .card-body .btn {
+    margin-top: auto;
+}
+
+/* Custom styles for the Contact section */
+#contact {
+    padding: 70px 0;
+    background: #ffffff;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(44, 62, 80, 0.05);
 }
 
 #contact h2 {
@@ -492,18 +606,18 @@ strong, b {
     padding: 12px 24px;
     border-radius: 6px;
     font-weight: 600;
-    background: #2C3E50;
-    border: none;
-    color: #ECF0F1;
+    background: #2C3E50 !important;
+    border: none !important;
+    color: #ECF0F1 !important;
     transition: all 0.3s ease;
     font-size: 0.9rem;
 }
 
 #contact a.btn:hover {
-    background: #34495E;
+    background: #34495E !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
-    color: #ECF0F1;
+    color: #ECF0F1 !important;
 }
 
 #contact a.btn img {
@@ -513,9 +627,8 @@ strong, b {
 /* Custom styles for the Resume section */
 #resume {
     padding: 70px 0;
-    background: #ffffff;
+    background: #f8f9fa;
     margin: 0;
-    box-shadow: 0 2px 4px rgba(44, 62, 80, 0.05);
 }
 
 #resume h2 {
@@ -523,50 +636,23 @@ strong, b {
     margin-left: 15px;
 }
 
-#certificates {
-    padding: 70px 0;
-    background: #f8f9fa;
-    margin: 0;
-}
-
-#certificates h2 {
-    text-align: left;
-    margin-left: 15px;
-}
-
-#awards {
-    padding: 70px 0;
-    background: #ffffff;
-    margin: 0;
-    box-shadow: 0 2px 4px rgba(44, 62, 80, 0.05);
-}
-
-#awards h2 {
-    text-align: left;
-    margin-left: 15px;
-}
-
-#resume .btn,
-#certificates .btn,
-#awards .btn {
+#resume .btn {
     margin: 10px;
     padding: 12px 24px;
     border-radius: 6px;
     font-weight: 600;
-    background: #2C3E50;
-    border: none;
-    color: #ECF0F1;
+    background: #2C3E50 !important;
+    border: none !important;
+    color: #ECF0F1 !important;
     transition: all 0.3s ease;
     font-size: 0.9rem;
 }
 
-#resume .btn:hover,
-#certificates .btn:hover,
-#awards .btn:hover {
-    background: #34495E;
+#resume .btn:hover {
+    background: #34495E !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
-    color: #ECF0F1;
+    color: #ECF0F1 !important;
 }
 
 /* Footer */
@@ -693,12 +779,16 @@ html {
         margin-bottom: 20px;
     }
 
-    #about, #projects, #skills, #contact, #resume, #certificates, #awards {
+    #about, #projects, #skills, #awards, #contact, #resume {
         padding: 50px 0;
     }
 
-    #about h2, #projects h2, #skills h2, #contact h2, #resume h2, #certificates h2, #awards h2 {
+    #about h2, #projects h2, #skills h2, #awards h2, #contact h2, #resume h2 {
         font-size: 1.8rem;
+    }
+
+    #awards .col-md-4 {
+        margin-bottom: 20px;
     }
 }
 

@@ -145,7 +145,7 @@ svg.fill { fill: currentColor; stroke: none; }
 }
 .nav__links { margin-left: auto; display: flex; gap: 4px; }
 .nav__links a {
-  color: var(--ink-2); font-size: 14.5px; font-weight: 500;
+  color: var(--ink-2); font-size: 14.5px; font-weight: 500; white-space: nowrap;
   padding: 8px 12px; border-radius: 8px; transition: color 0.2s, background-color 0.2s;
 }
 .nav__links a:hover { color: var(--ink); background: var(--surface-2); text-decoration: none; }
@@ -153,7 +153,7 @@ svg.fill { fill: currentColor; stroke: none; }
 @media (max-width: 1100px) { .nav__inner { gap: 12px; } .nav__links { gap: 0; } .nav__links a { padding: 8px 9px; font-size: 14px; } }
 .nav__actions { display: flex; gap: 6px; margin-left: auto; }
 .nav__links + .nav__actions { margin-left: 0; }
-@media (max-width: 900px) { .nav__links + .nav__actions { margin-left: auto; } }
+@media (max-width: 1080px) { .nav__links + .nav__actions { margin-left: auto; } }
 
 .icon-btn {
   display: grid; place-items: center; width: 40px; height: 40px;
@@ -439,7 +439,7 @@ svg.fill { fill: currentColor; stroke: none; }
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .nav__links {
     position: fixed; top: var(--nav-h); left: 0; right: 0;
     flex-direction: column; gap: 0; padding: 8px 16px 20px;
@@ -488,3 +488,5 @@ svg.fill { fill: currentColor; stroke: none; }
 
 .job__org a { color: inherit; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 3px; transition: text-decoration-color 0.2s; }
 .job__org a:hover { text-decoration-color: currentColor; }
+
+.lang-btn { font: 600 12.5px var(--font-body); letter-spacing: 0.04em; }

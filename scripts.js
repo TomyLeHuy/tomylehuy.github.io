@@ -20,6 +20,63 @@
   });
 
   // ---------------------------------------------------------------------------
+  // Language switch (English is the text in the HTML, German comes from i18n.js)
+  // ---------------------------------------------------------------------------
+  var langToggle = document.getElementById("langToggle");
+  var translatable = document.querySelectorAll("[data-i18n]");
+  var strings = { en: {}, de: window.I18N_DE || {} };
+  translatable.forEach(function (el) { strings.en[el.dataset.i18n] = el.innerHTML; });
+
+  var head = {
+    en: { title: document.title, description: document.querySelector('meta[name="description"]').content },
+    de: {
+      title: "Tomy Huy Le · Junior Researcher am DFKI",
+      description: "Tomy Huy Le – Junior Researcher am Institut für Wirtschaftsinformatik (IWi) im DFKI und Masterstudent in Information Systems an der Universität des Saarlandes."
+    }
+  };
+
+  function setLanguage(lang) {
+    var dict = strings[lang];
+    var nerWasOn = !!document.querySelector("#nerText mark.is-on");
+    translatable.forEach(function (el) {
+      var text = dict[el.dataset.i18n];
+      if (text != null) el.innerHTML = text;
+    });
+    if (nerWasOn) document.querySelectorAll("#nerText mark").forEach(function (m) { m.classList.add("is-on"); });
+
+    root.lang = lang;
+    document.title = head[lang].title;
+    document.querySelector('meta[name="description"]').content = head[lang].description;
+
+    var other = lang === "de" ? "en" : "de";
+    langToggle.textContent = other.toUpperCase();
+    langToggle.lang = other;
+    langToggle.setAttribute("aria-label", other === "de" ? "Auf Deutsch umschalten" : "Switch to English");
+  }
+
+  function initialLanguage() {
+    var fromUrl = new URLSearchParams(window.location.search).get("lang");
+    if (fromUrl === "de" || fromUrl === "en") return fromUrl;
+    try {
+      var saved = localStorage.getItem("lang");
+      if (saved === "de" || saved === "en") return saved;
+    } catch (e) {}
+    return (navigator.language || "").toLowerCase().indexOf("de") === 0 ? "de" : "en";
+  }
+
+  setLanguage(initialLanguage());
+  langToggle.addEventListener("click", function () {
+    var next = root.lang === "de" ? "en" : "de";
+    setLanguage(next);
+    try { localStorage.setItem("lang", next); } catch (e) {}
+    var url = new URL(window.location.href);
+    if (url.searchParams.has("lang")) {
+      url.searchParams.set("lang", next);
+      history.replaceState(null, "", url);
+    }
+  });
+
+  // ---------------------------------------------------------------------------
   // Mobile menu
   // ---------------------------------------------------------------------------
   var menuToggle = document.getElementById("menuToggle");
@@ -102,10 +159,11 @@
   // ---------------------------------------------------------------------------
   var nerText = document.getElementById("nerText");
   var nerReplay = document.getElementById("nerReplay");
-  var marks = nerText.querySelectorAll("mark");
   var timers = [];
 
   function runExtraction() {
+    // Queried on each run because switching language replaces the sentence
+    var marks = nerText.querySelectorAll("mark");
     timers.forEach(clearTimeout);
     timers = [];
     marks.forEach(function (m) { m.classList.remove("is-on"); });

@@ -3,363 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomy Huy Le - AI Researcher | Business Informatics | DFKI</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Tomy Huy Le · Junior Researcher at DFKI</title>
+    <meta name="description" content="Tomy Huy Le – Junior Researcher at the Institute for Information Systems (IWi) at DFKI and M.Sc. Information Systems student at Saarland University.">
+    <meta name="theme-color" content="#f7f6f2">
+    <meta property="og:title" content="Tomy Huy Le · Junior Researcher at DFKI">
+    <meta property="og:description" content="Junior Researcher at DFKI and M.Sc. Information Systems student at Saarland University.">
+    <meta property="og:image" content="images/about/profile.jpg">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f3a8a'/%3E%3Ctext x='16' y='21.5' font-family='Georgia,serif' font-size='15' fill='white' text-anchor='middle'%3ETL%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2026-10b">
+    <script>
+        // Apply the saved theme and enable reveal animations before first paint
+        document.documentElement.classList.add("js");
+        try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Tomy Huy Le</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#intro">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#awards">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certificates">Certificates</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">Documents</a>
-                    </li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+        <div class="nav__inner wrap">
+            <a class="nav__brand" href="#top" aria-label="Back to top">
+                <span class="nav__mark">TL</span>
+                <span class="nav__name">Tomy Huy Le</span>
+            </a>
+            <nav class="nav__links" id="navLinks" aria-label="Main">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#thesis">Thesis</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#awards">Awards</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav__actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="icon-btn nav__burger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero wrap" id="top">
+            <div class="hero__text">
+                <h1 class="hero__title reveal">Tomy Huy Le</h1>
+                <p class="hero__lead reveal">
+                    Junior Researcher at the Institute for Information Systems (IWi) at DFKI and
+                    M.Sc. Information Systems student at Saarland University.
+                </p>
+                <p class="hero__meta reveal">
+                    I work on machine learning, large language models and information extraction.
+                </p>
+                <div class="hero__cta reveal">
+                    <a class="btn btn--primary" href="Resume.pdf" download>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+                        Download CV
+                    </a>
+                    <a class="btn btn--ghost" href="#contact">Get in touch</a>
+                </div>
+                <ul class="socials reveal" aria-label="Profiles">
+                    <li><a href="https://www.linkedin.com/in/tomy-huy-le-8b9774307/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                    </a></li>
+                    <li><a href="https://github.com/TomyLeHuy" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 0a12 12 0 0 0-3.8 23.39c.6.1.83-.26.83-.58v-2.23c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 0z"/></svg>
+                    </a></li>
+                    <li><a href="mailto:tomyle49@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                    </a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    
- <!-- Intro Section -->
-<section id="intro" class="text-center bg-light text-dark py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-12">
-                <img src="images/about/1.jpg" class="rounded-circle mb-4" alt="Tomy Huy Le - Professional Profile Picture" width="280">
-                <h1 class="mt-3">Tomy Huy Le</h1>
-                <p class="lead">Student Researcher | Business Informatics Student<br>German Research Center for Artificial Intelligence (DFKI)</p>
-                <a href="Resume.pdf" class="btn btn-dark resume-button" download>Download CV</a>
-                <a href="#contact" class="btn btn-outline-dark">Get in Touch</a>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/tomy-le-8b9774307/" target="_blank" aria-label="LinkedIn Profile">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" fill="#ECF0F1"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/TomyLeHuy" target="_blank" aria-label="GitHub Profile">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2773 21.0497 21.7438 19.0074C23.2103 16.9651 23.9994 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="#ECF0F1"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:tomyle49@gmail.com" target="_blank" aria-label="Email Contact">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#ECF0F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                            <path d="M22 6L12 13L2 6" stroke="#ECF0F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="tel:015168595020" target="_blank" aria-label="Phone Contact">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="#ECF0F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-    <!-- About Section -->
-    <div id="home" class="container mt-5">
-        <section id="about" class="mt-5 pt-5">
-            <div class="row align-items-center">
-                <div class="col-md-12 text-left">
-                    <h2>Personal Summary</h2>
-                    <p>I'm currently in my 6th semester studying Business Informatics at Saarland University, where I work as a Student Researcher at the Institute for Information Systems (IWi) in the German Research Center for Artificial Intelligence (DFKI). My focus lies in <strong>machine learning, business process optimization and industrial AI applications</strong>, and I had the opportunity to contribute to federally-funded projects for the German Ministry of Transport and Digital Infrastructure (BMFTR) and the Ministry for Economic Affairs and Climate Action (BMWK).</p>
-                    <p>What I enjoy most about my work is bridging the gap between academic research and practical business applications. I thrive in leading teams, presenting ideas to stakeholders, and managing interdisciplinary AI projects that bring cutting-edge technology into real-world industrial environments.</p>
-                    <p>I'm passionate about technology and new innovations, particularly when it comes to developing efficient, scalable solutions that make a real difference. Whether it's intelligent automation or data-driven decision-making, I'm always excited to explore how AI technologies can transform the way we work and do business.</p>
-                    <p>I believe in continuous learning and staying current with emerging technologies. I love the challenge of quickly adapting to new tools and frameworks, and thrive in collaborative environments where I can learn from others while contributing my own skills and ideas.</p>
-                    <p>If you'd like to know more, feel free to check out my <a href="Resume.pdf" download>resume</a> or <a href="#contact">get in touch</a>.</p>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="info-box">
-                                <h4>Professional Experience</h4>
-                                 <ul>
-                                    <li><b>Present:</b> Student Researcher<br><small>German Research Center for Artificial Intelligence (DFKI)</small></li>
-                                    <li><b>Previous:</b> IT & Digital Media Manager<br><small>Project coordination and technical oversight</small></li>
-                                    <li><b>Previous:</b> Business Operations Manager<br><small>Family business management and operations</small></li>
-                                    <li><b>Internship:</b> Md Binco GmbH<br><small>Industrial IT and business processes</small></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info-box">
-                                <h4>Academic Background</h4>
-                                <ul>
-                                    <li><b>Current:</b> Bachelor of Science<br><small>Business Informatics (6th Semester)<br>Saarland University, Germany</small></li>
-                                    <li><b>2021:</b> Abitur (High School Diploma)<br><small>Illtal-Gymnasium Illingen<br>Focus: Mathematics & Sciences</small></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info-box">
-                                <h4>Certifications & Recognition</h4>
-                                <ul>
-                                    <li><b>Jan 2025:</b> Professional Consulting Certification<br><small>Advanced training in business consulting</small></li>
-                                    <li><b>Jan 2025:</b> Best Student AI Project Award<br><small>University research excellence recognition</small></li>
-                                    <li><b>Dec 2024:</b> IHK Certified Instructor<br><small>Chamber of Commerce teaching qualification</small></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <figure class="hero__portrait reveal">
+                <img src="images/about/profile.jpg" alt="Portrait of Tomy Huy Le" width="700" height="900">
+            </figure>
+        </section>
+
+        <!-- About -->
+        <section class="section wrap" id="about">
+            <div class="section__head reveal">
+                <h2>About</h2>
+            </div>
+            <div class="about">
+                <div class="about__text reveal">
+                    <p>
+                        I work as a <strong>Junior Researcher</strong> at the Institute for Information Systems (IWi) at the
+                        German Research Center for Artificial Intelligence (DFKI) in Saarbrücken. This winter semester I started
+                        my Master's in <strong>Information Systems</strong> at Saarland University.
+                    </p>
+                    <p>
+                        I finished my B.Sc. in Business Informatics at Saarland University. My bachelor's thesis was about
+                        extracting named entities from medical documents with large language models and was graded 1.0.
+                    </p>
+                    <p>
+                        Before returning to DFKI, I did a six-month internship at Capgemini, where I worked on AI tools
+                        for internal use, including integrations with Jira, Confluence, GitLab and Jenkins. Before that I was a
+                        Research Assistant at the same institute and managed a family restaurant for several years.
+                    </p>
                 </div>
+                <aside class="about__focus reveal" aria-label="Focus areas">
+                    <h3>Interests</h3>
+                    <ul class="focus-list">
+                        <li><span>Large language models</span></li>
+                        <li><span>Information extraction</span></li>
+                        <li><span>Machine learning &amp; forecasting</span></li>
+                        <li><span>AI in business processes</span></li>
+                    </ul>
+                </aside>
             </div>
         </section>
 
-        <!-- Projects Section -->
-
-<section id="projects" class="mt-5 pt-5">
-    <div class="container">
-        <h2 class="mb-4">Projects & Technical Achievements</h2>
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-4 d-flex">
-                <div class="card mb-4 shadow-sm flex-fill">
-                    <img src="images/projects/dashboard.png" class="card-img-top" alt="Industrial AI Dashboard">
-                    <div class="card-body">
-                        <h5 class="card-title">AI-Powered Demand Forecasting System</h5>
-                        <p class="card-text"><strong>Technologies:</strong> Dash, Plotly, Python, Machine Learning<br>
-                        Developed enterprise-grade demand forecasting dashboard with real-time stock movement simulation. Delivers actionable insights for production planning and inventory optimization in manufacturing environments. Implements advanced visualization and predictive analytics.</p>
-                        <a href="https://gitlab-iwi.dfki.de/students/pa-2025-tomyle/-/tree/v1.0?ref_type=tags" class="btn btn-outline-dark">Technical Details</a>
-                    </div>
-                </div>
+        <!-- Experience -->
+        <section class="section wrap" id="experience">
+            <div class="section__head reveal">
+                <h2>Experience</h2>
             </div>
 
-            <div class="col-md-4 d-flex">
-                <div class="card mb-4 shadow-sm flex-fill">
-                    <img src="images/projects/1.png" class="card-img-top" alt="Game Development Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Ultimate TicTacToe</h5>
-                        <p class="card-text"><strong>Technologies:</strong> Java, Object-Oriented Programming<br>
-                        An extended Version of the well-known game Tic Tac Toe, I worked on in my Programming 2 course.</p>
-                        <a href="https://github.com/TomyLeHuy/UTTT" class="btn btn-outline-dark">View Repository</a>
+            <ol class="timeline">
+                <li class="job job--current reveal">
+                    <div class="job__when"><span class="pill pill--live">Current</span>Since 2026</div>
+                    <div class="job__body">
+                        <h3>Junior Researcher</h3>
+                        <p class="job__org"><a href="https://www.dfki.de/en/web/research/research-departments/institute-for-information-systems" target="_blank" rel="noopener">Institute for Information Systems (IWi)</a> · <a href="https://www.dfki.de/en/web" target="_blank" rel="noopener">DFKI</a> · Saarbrücken</p>
+                        <p>Research on applied AI at the Institute for Information Systems, alongside my Master's studies.</p>
                     </div>
-                </div>
+                </li>
+
+                <li class="job reveal">
+                    <div class="job__when">Mar 2026 – Aug 2026</div>
+                    <div class="job__body">
+                        <h3>Software Engineer &amp; IT Consultant Intern</h3>
+                        <p class="job__org"><a href="https://www.capgemini.com/de-de/" target="_blank" rel="noopener">Capgemini Germany GmbH</a> · Frankfurt</p>
+                        <ul class="job__points">
+                            <li>Led an <strong>AI tooling team</strong> working on GenAI integrations and coordinated implementation and priorities.</li>
+                            <li>Connected <strong>OpenWebUI</strong> with Jira, Confluence, Graylog, Jenkins, GitLab and internal knowledge bases using <strong>MCP</strong> and <strong>RAG</strong>.</li>
+                            <li>Containerized and deployed AI services on <strong>OpenShift</strong>.</li>
+                            <li>Implemented a multi-user Atlassian MCP proxy with <strong>JWT</strong> and <strong>Vault</strong>, so each user keeps their own Jira and Confluence permissions.</li>
+                            <li>Built a document conversion and <strong>ingestion pipeline</strong> for RAG knowledge bases.</li>
+                            <li>Designed a <strong>multi-agent root-cause analysis</strong> that links Jenkins failures with logs, screenshots and GitLab changes.</li>
+                            <li>Presented results to business and technical stakeholders and advised management on using AI in daily work.</li>
+                        </ul>
+                        <ul class="tags"><li>OpenWebUI</li><li>MCP</li><li>RAG</li><li>OpenShift</li><li>FastMCP</li><li>Multi-agent</li></ul>
+                    </div>
+                </li>
+
+                <li class="job reveal">
+                    <div class="job__when">Nov 2024 – Mar 2026</div>
+                    <div class="job__body">
+                        <h3>Research Assistant</h3>
+                        <p class="job__org"><a href="https://www.dfki.de/en/web/research/research-departments/institute-for-information-systems" target="_blank" rel="noopener">Institute for Information Systems (IWi)</a> · <a href="https://www.dfki.de/en/web" target="_blank" rel="noopener">DFKI</a> · Saarbrücken</p>
+                        <ul class="job__points">
+                            <li>Implemented an <strong>interactive dashboard</strong> for business process prediction with ML models, explainability methods (XAI) and an LLM-based chat interface.</li>
+                            <li>Developed machine learning models for industrial partners in inventory management and production.</li>
+                            <li>Built data preprocessing pipelines for <strong>time-series forecasting</strong>.</li>
+                            <li>Presented project results to the Federal Ministry of Research, Technology and Space (BMFTR) and worked on the BMWK project <strong>“GreenAI-Hub”</strong>.</li>
+                        </ul>
+                        <ul class="tags"><li>Python</li><li>Scikit-Learn</li><li>XAI</li><li>LLM agents</li><li>Dash/Plotly</li></ul>
+                    </div>
+                </li>
+
+                <li class="job reveal">
+                    <div class="job__when">Jan 2019 – Nov 2024</div>
+                    <div class="job__body">
+                        <h3>Manager</h3>
+                        <p class="job__org">Zen-Zen SUSHI &amp; MORE · Sankt Wendel</p>
+                        <ul class="job__points">
+                            <li>Set up and maintained the cash register systems.</li>
+                            <li>Managed social media channels and advertising.</li>
+                            <li>Responsible for staff, training and customer service, and also worked in the kitchen.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="job reveal">
+                    <div class="job__when">Oct 2021 – Dec 2021</div>
+                    <div class="job__body">
+                        <h3>Data Analyst (Internship)</h3>
+                        <p class="job__org">Md Binco GmbH · Eschborn</p>
+                        <p>Data analysis and property management for customers.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Thesis -->
+        <section class="section wrap" id="thesis">
+            <div class="section__head reveal">
+                <h2>Bachelor's Thesis</h2>
             </div>
 
-            <div class="col-md-4 d-flex">
-                <div class="card mb-4 shadow-sm flex-fill">
-                    <img src="images/projects/tixicity.png" class="card-img-top" alt="NLP Application">
-                    <div class="card-body">
-                        <h5 class="card-title">Multi-Class Sentiment Analysis Platform</h5>
-                        <p class="card-text"><strong>Technologies:</strong> Django, TensorFlow, NLP, Machine Learning<br>
-                        Web application implementing advanced NLP models for multi-level toxicity detection. Features full-stack development with Django framework, model deployment, and real-time inference capabilities.</p>
-                        <a href="https://github.com/TomyLeHuy/toxicity_model" class="btn btn-outline-dark">View Repository</a>
+            <article class="thesis reveal">
+                <div class="thesis__main">
+                    <div class="thesis__grade" aria-label="Grade 1.0">
+                        <span class="thesis__grade-num">1.0</span>
+                        <span class="thesis__grade-lbl">Final grade</span>
                     </div>
+                    <p class="thesis__title">
+                        “Extraction of Named Entities from Medical Documents Using Large Language Models —
+                        Conception, Implementation and Evaluation”
+                    </p>
+                    <p class="thesis__meta">Supervised by Prof. Dr. Peter Loos and Dipl.-Wirtsch.-Ing. Andreas Emrich · IWi at DFKI · Saarland University, 2026</p>
+                    <p>
+                        The thesis compares different approaches to <strong>Named Entity Recognition</strong> for
+                        pharmacovigilance (drug safety monitoring). The models were evaluated on PVRadarKG, a dataset
+                        with 19 entity types, with the goal of filling a knowledge graph from clinical texts.
+                    </p>
+                    <ul class="thesis__findings">
+                        <li>Fine-tuned encoders (PubMedBERT, BioBERT) achieved the best overall results.</li>
+                        <li>Medium-sized open LLMs such as Gemma-3-27B performed similarly to 70B models when their output was structured with frameworks like LangExtract.</li>
+                        <li>The zero-shot model GLiNER worked well without task-specific training.</li>
+                        <li>A normalization pipeline, hallucination filtering and a risk-weighted F<sub>ω</sub> score were used to compare the models.</li>
+                    </ul>
+                    <ul class="tags"><li>NER</li><li>LLMs</li><li>PubMedBERT</li><li>GLiNER</li><li>LangExtract</li><li>Knowledge Graphs</li><li>Pharmacovigilance</li></ul>
                 </div>
+
+                <!-- Live NER illustration -->
+                <div class="ner" aria-label="Illustration: entities extracted from a clinical sentence">
+                    <div class="ner__bar">
+                        <span class="ner__file">Example</span>
+                        <button class="ner__replay" id="nerReplay" type="button">Replay</button>
+                    </div>
+                    <p class="ner__text" id="nerText">
+                        A 67-year-old female patient started
+                        <mark data-label="DRUG">amoxicillin</mark>
+                        <mark data-label="DOSE">500 mg</mark> three times daily for
+                        <mark data-label="INDICATION">acute sinusitis</mark>.
+                        After two days she developed a
+                        <mark data-label="ADR">generalized rash</mark> and
+                        <mark data-label="ADR">pruritus</mark>; the drug was discontinued.
+                    </p>
+                    <ul class="ner__legend">
+                        <li data-label="DRUG">Drug</li>
+                        <li data-label="DOSE">Dosage</li>
+                        <li data-label="INDICATION">Indication</li>
+                        <li data-label="ADR">Adverse reaction</li>
+                    </ul>
+                    <p class="ner__note">Example sentence, not from the thesis data.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Education -->
+        <section class="section wrap" id="education">
+            <div class="section__head reveal">
+                <h2>Education</h2>
             </div>
-        </div>
-    </div>
-</section>
-
-
-        
-
-        <!-- Skills Section -->
-        <section id="skills" class="mt-5 pt-5">
-            <div class="container">
-                <h2 class="mb-4">Technical Competencies & Qualifications</h2>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <div class="info-box">
-                            <h4>Core Programming Skills</h4>
-                            <ul class="list-unstyled">
-                                <li><strong>Python</strong> — Advanced</li>
-                                <li><strong>Java</strong> — Advanced</li>
-                                <li><strong>C</strong> — Intermediate</li>
-                                <li><strong>HTML/CSS</strong> — Proficient</li>
-                                <li><strong>JavaScript</strong> — Basics</li>
-                                <li><strong>SQL</strong> — Experienced</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info-box">
-                            <h4>AI/ML Tech Stack</h4>
-                            <ul class="list-unstyled">
-                                <li><strong>Django</strong> — Full-Stack Development</li>
-                                <li><strong>PyTorch</strong> — Deep Learning</li>
-                                <li><strong>TensorFlow</strong> — Neural Networks</li>
-                                <li><strong>Scikit-Learn</strong> — ML Algorithms</li>
-                                <li><strong>Dash/Plotly</strong> — Dashboard & Data Visualization</li>
-                                <li><strong>Pandas/NumPy</strong> — Data Analysis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info-box">
-                            <h4>Language Proficiency</h4>
-                            <ul class="list-unstyled">
-                                <li><strong>German</strong> — Native Speaker<br><small>Professional working proficiency</small></li>
-                                <li><strong>English</strong> — Fluent (C1)<br><small>Business & technical communication</small></li>
-                                <li><strong>Vietnamese</strong> — Native Speaker<br><small>Full professional proficiency</small></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="edu">
+                <article class="edu__card edu__card--now reveal">
+                    <span class="pill pill--live">In progress</span>
+                    <h3>M.Sc. Information Systems</h3>
+                    <p class="edu__org">Saarland University</p>
+                    <p>Since winter semester 2026/27.</p>
+                </article>
+                <article class="edu__card reveal">
+                    <span class="pill">Apr 2023 – Apr 2026</span>
+                    <h3>B.Sc. Business Informatics</h3>
+                    <p class="edu__org">Saarland University</p>
+                    <p>Specialization in software engineering and artificial intelligence. Thesis graded <strong>1.0</strong>.</p>
+                </article>
+                <article class="edu__card reveal">
+                    <span class="pill">Apr 2022 – Mar 2023</span>
+                    <h3>B.Sc. Computer Science</h3>
+                    <p class="edu__org">Saarland University</p>
+                    <p>Transferred to Business Informatics.</p>
+                </article>
+                <article class="edu__card reveal">
+                    <span class="pill">Aug 2013 – Jun 2021</span>
+                    <h3>Abitur</h3>
+                    <p class="edu__org">Illtal-Gymnasium Illingen</p>
+                    <p>Graduated with a grade of <strong>1.5</strong>.</p>
+                </article>
             </div>
         </section>
 
-        <!-- Awards Section -->
-        <section id="awards" class="mt-5 pt-5">
-            <div class="container">
-                <h2 class="mb-4">Academic Recognition & Awards</h2>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-4 d-flex">
-                        <div class="card mb-4 shadow-sm flex-fill">
-                            <div class="card-body text-center">
-                                <div class="award-icon mb-3">
-                                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#2C3E50" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <h5 class="card-title">Best Student AI Project Award</h5>
-                                <p class="card-text"><strong>January 2025</strong><br>
-                                Awarded for outstanding achievement in artificial intelligence research and project implementation. Recognized for developing innovative AI solution with real-world application in industrial environments.</p>
-                                <a href="KIU.pdf" class="btn btn-outline-dark" download>View Certificate</a>
-                            </div>
-                        </div>
+        <!-- Projects -->
+        <section class="section wrap" id="projects">
+            <div class="section__head reveal">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects">
+                <article class="project reveal">
+                    <div class="project__img"><img src="images/projects/dashboard.png" alt="Demand forecasting dashboard" loading="lazy"></div>
+                    <div class="project__body">
+                        <span class="project__date">Jul 2025 – Aug 2025</span>
+                        <h3>Demand Forecasting Dashboard</h3>
+                        <p>A reusable demand forecasting dashboard with real-time stock movement simulation.</p>
+                        <ul class="tags"><li>Python</li><li>Dash/Plotly</li><li>Scikit-Learn</li></ul>
+                        <a class="link-arrow" href="https://gitlab-iwi.dfki.de/students/pa-2025-tomyle/-/tree/v1.0?ref_type=tags" target="_blank" rel="noopener">Technical details</a>
                     </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__img"><img src="images/projects/tixicity.png" alt="Comment toxicity model" loading="lazy"></div>
+                    <div class="project__body">
+                        <span class="project__date">Jul 2024 – Oct 2024</span>
+                        <h3>Comment Toxicity Model</h3>
+                        <p>A sentiment analysis model that detects different levels of toxicity in user comments, with a Django web app.</p>
+                        <ul class="tags"><li>Python</li><li>TensorFlow</li><li>Django</li></ul>
+                        <a class="link-arrow" href="https://github.com/TomyLeHuy/toxicity_model" target="_blank" rel="noopener">View repository</a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__img"><img src="images/projects/1.png" alt="Ultimate Tic Tac Toe board" loading="lazy"></div>
+                    <div class="project__body">
+                        <span class="project__date">Jun 2023 – Jul 2023</span>
+                        <h3>Ultimate Tic Tac Toe</h3>
+                        <p>An extended version of Tic Tac Toe with more complex game mechanics, built in my Programming 2 course.</p>
+                        <ul class="tags"><li>Java</li><li>OOP</li></ul>
+                        <a class="link-arrow" href="https://github.com/TomyLeHuy/UTTT" target="_blank" rel="noopener">View repository</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section wrap" id="skills">
+            <div class="section__head reveal">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills">
+                <div class="skill-group reveal">
+                    <h3>Machine Learning &amp; AI</h3>
+                    <ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>Scikit-Learn</li><li>Hugging Face Transformers</li><li>Time-Series Forecasting</li><li>Explainable AI (XAI)</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>LLMs &amp; NLP</h3>
+                    <ul class="chips"><li>Large Language Models</li><li>Named Entity Recognition</li><li>Information Extraction</li><li>Prompt Engineering</li><li>LLM Evaluation</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Generative AI Integration</h3>
+                    <ul class="chips"><li>Retrieval-Augmented Generation (RAG)</li><li>Model Context Protocol (FastMCP)</li><li>Multi-Agent Systems</li><li>OpenWebUI</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Software Development</h3>
+                    <ul class="chips"><li>Python</li><li>Java</li><li>Django</li><li>Dash/Plotly</li><li>HTML/CSS</li><li>JavaScript</li><li>Git</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Deployment &amp; Operations</h3>
+                    <ul class="chips"><li>Red Hat OpenShift</li><li>Containerization</li><li>Data Pipelines</li><li>Secrets Management (Vault)</li><li>JWT Authentication</li></ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Professional Skills</h3>
+                    <ul class="chips"><li>Team Leadership</li><li>Stakeholder Communication</li><li>IT Consulting</li><li>Requirements Analysis</li><li>Training &amp; Instruction (IHK)</li></ul>
                 </div>
             </div>
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificates" class="mt-5 pt-5">
-            <div class="container">
-                <h2 class="mb-4">Professional Certifications</h2>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-4 d-flex">
-                        <div class="card mb-4 shadow-sm flex-fill">
-                            <div class="card-body text-center">
-                                <div class="award-icon mb-3">
-                                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" fill="#2C3E50" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M14 2V8H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 13H8M16 17H8M10 9H8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <h5 class="card-title">IHK Certified Instructor</h5>
-                                <p class="card-text"><strong>December 2024</strong><br>
-                                Official teaching qualification from the German Chamber of Commerce and Industry (IHK). Certified to provide professional training and instruction in businesses.</p>
-                                <a href="IHK_Zeugnis.pdf" class="btn btn-outline-dark" download>View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex">
-                        <div class="card mb-4 shadow-sm flex-fill">
-                            <div class="card-body text-center">
-                                <div class="award-icon mb-3">
-                                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22 10V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V10C2 10.5304 2.21071 11.0391 2.58579 11.4142C2.96086 11.7893 3.46957 12 4 12H20C20.5304 12 21.0391 11.7893 21.4142 11.4142C21.7893 11.0391 22 10.5304 22 10Z" fill="#2C3E50" stroke="#2C3E50" stroke-width="2"/>
-                                        <path d="M12 12V22" stroke="#2C3E50" stroke-width="2" stroke-linecap="round"/>
-                                        <path d="M8 22H16" stroke="#2C3E50" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <h5 class="card-title">Business Consulting Certification</h5>
-                                <p class="card-text"><strong>January 2025</strong><br>
-                                Advanced training in business consulting methodologies, strategic analysis, and client engagement. Covers comprehensive consulting frameworks, conversation and presentation training, and best practices for innovative solutions.</p>
-                                <a href="Consulting_Certificate.pdf" class="btn btn-outline-dark" download>View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="skills-row">
+                <div class="skill-group reveal">
+                    <h3>Languages</h3>
+                    <ul class="langs langs--row">
+                        <li><span>German</span><span>Native</span></li>
+                        <li><span>Vietnamese</span><span>Native</span></li>
+                        <li><span>English</span><span>Fluent</span></li>
+                    </ul>
                 </div>
             </div>
+            <p class="hobbies reveal">Hobbies: <span>Basketball</span> · <span>Weight lifting</span> · <span>Boxing</span></p>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="text-center mt-5 pt-5">
-            <div class="container">
-                <h2 class="mb-4">Contact</h2>
-                <p class="mb-4">Available for professional opportunities, collaborations, and inquiries</p>
-                <p>
-                    <a href="mailto:tomyle49@gmail.com" class="btn btn-outline-dark">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2" style="vertical-align: middle;">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        tomyle49@gmail.com
-                    </a>
-                    <a href="tel:015168595020" class="btn btn-outline-dark">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2" style="vertical-align: middle;">
-                            <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        </svg>
-                        +49 151 68595020
-                    </a>
-                    <a href="https://www.linkedin.com/in/tomy-le-8b9774307/" class="btn btn-outline-dark" target="_blank">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2" style="vertical-align: middle;">
-                            <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" fill="currentColor"/>
-                        </svg>
-                        LinkedIn Profile
-                    </a>
-                </p>
+        <!-- Awards & Certificates -->
+        <section class="section wrap" id="awards">
+            <div class="section__head reveal">
+                <h2>Awards &amp; Certificates</h2>
+            </div>
+            <div class="awards">
+                <a class="award reveal" href="KIU.pdf" target="_blank" rel="noopener">
+                    <span class="award__date">Jan 2025</span>
+                    <h3>Best AI Project</h3>
+                    <p>ISS Saarbrücken, Prof. Dr.-Ing. Wolfgang Maaß</p>
+                    <span class="link-arrow">View certificate</span>
+                </a>
+                <a class="award reveal" href="Consulting_Certificate.pdf" target="_blank" rel="noopener">
+                    <span class="award__date">Nov 2024 – Feb 2025</span>
+                    <h3>Consulting Certificate</h3>
+                    <p>IWi at DFKI Saarbrücken</p>
+                    <span class="link-arrow">View certificate</span>
+                </a>
+                <a class="award reveal" href="IHK_Zeugnis.pdf" target="_blank" rel="noopener">
+                    <span class="award__date">Nov 2024</span>
+                    <h3>Instructor Certificate</h3>
+                    <p>IHK Saarbrücken</p>
+                    <span class="link-arrow">View certificate</span>
+                </a>
             </div>
         </section>
 
-        <!-- Resume Section -->
-        <section id="resume" class="text-center mt-5 pt-5">
-            <div class="container">
-                <h2 class="mb-4">Personal Documents</h2>
-                <p class="mb-4">Comprehensive documentation of qualifications and academic performance</p>
-                <p>
-                    <a href="Resume.pdf" class="btn btn-outline-dark" download>Curriculum Vitae (CV)</a>
-                    <a href="AktuellesDatenblatt.pdf" class="btn btn-outline-dark" download>Academic Transcript</a>
-                </p>
+        <!-- Contact -->
+        <section class="section wrap" id="contact">
+            <div class="contact reveal">
+                <div class="contact__intro">
+                    <h2>Contact</h2>
+                    <p>Feel free to reach out by email or on LinkedIn.</p>
+                </div>
+                <dl class="contact__list">
+                    <div><dt>Email</dt><dd><a href="mailto:tomyle49@gmail.com">tomyle49@gmail.com</a></dd></div>
+                    <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/tomy-huy-le-8b9774307/" target="_blank" rel="noopener">Tomy Huy Le</a></dd></div>
+                    <div><dt>GitHub</dt><dd><a href="https://github.com/TomyLeHuy" target="_blank" rel="noopener">TomyLeHuy</a></dd></div>
+                    <div><dt>Documents</dt><dd><a href="Resume.pdf" download>CV (PDF)</a> · <a href="AktuellesDatenblatt.pdf" download>Transcript (PDF)</a></dd></div>
+                </dl>
             </div>
         </section>
-    </div>
+    </main>
 
-
-
-    <!-- Footer -->
-    <footer class="text-center mt-5 pt-5 pb-3">
-        <div class="container">
-            <p>&copy; 2025 Tomy Huy Le. All Rights Reserved.</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#about">About</a></li>
-                <li class="list-inline-item"><a href="#projects">Projects</a></li>
-                <li class="list-inline-item"><a href="#skills">Skills</a></li>
-                <li class="list-inline-item"><a href="#awards">Awards</a></li>
-                <li class="list-inline-item"><a href="#certificates">Certificates</a></li>
-                <li class="list-inline-item"><a href="#contact">Contact</a></li>
-                <li class="list-inline-item"><a href="#resume">Documents</a></li>
-            </ul>
-        </div>
+    <footer class="footer wrap">
+        <p>© <span id="year">2026</span> Tomy Huy Le</p>
+        <a href="#top" class="footer__top">Back to top ↑</a>
     </footer>
 
-        <!-- Bootstrap JS and dependencies -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- Custom JS -->
-        <script src="scripts.js"></script>
-    </body>
-    </html>
-    
-   
+    <script src="scripts.js?v=2026-10b"></script>
+</body>
+</html>

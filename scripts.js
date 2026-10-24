@@ -1,107 +1,140 @@
-// Smooth scrolling for navigation links with offset
-$(document).ready(function () {
-  // Smooth scrolling for navigation links
-  $("a.nav-link, footer a").on("click", function (event) {
-    if (this.hash !== "") {
-      event.preventDefault();
+// Vanilla JS only – runs as-is on GitHub Pages
+(function () {
+  "use strict";
 
-      var hash = this.hash;
-      var navbarHeight = $(".navbar").outerHeight();
+  var root = document.documentElement;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      $("html, body").animate(
-        {
-          scrollTop: $(hash).offset().top - navbarHeight,
-        },
-        1000,
-        "swing",
-        function () {
-          // window.location.hash = hash;
-        }
-      );
-    }
-  });
-
-  // Navbar scroll effect
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 100) {
-      $("#mainNavbar").addClass("scrolled");
-    } else {
-      $("#mainNavbar").removeClass("scrolled");
-    }
-  });
-
-  // Scroll reveal animation for sections
-  function revealOnScroll() {
-    var reveals = $("section, .card, .info-box");
-
-    reveals.each(function () {
-      var windowHeight = $(window).height();
-      var elementTop = $(this).offset().top;
-      var elementVisible = 150;
-
-      if ($(window).scrollTop() > elementTop - windowHeight + elementVisible) {
-        $(this).addClass("active");
-      }
-    });
+  // ---------------------------------------------------------------------------
+  // Theme toggle (remembers choice, otherwise follows the OS)
+  // ---------------------------------------------------------------------------
+  var themeToggle = document.getElementById("themeToggle");
+  function currentTheme() {
+    if (root.dataset.theme) return root.dataset.theme;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
-
-  $(window).on("scroll", revealOnScroll);
-  revealOnScroll(); // Initial check
-
-  // Subtle parallax effect to intro section (professional)
-  $(window).on("scroll", function () {
-    var scrolled = $(window).scrollTop();
-    if (scrolled < 500) {
-      $("#intro").css("transform", "translateY(" + scrolled * 0.15 + "px)");
-    }
+  themeToggle.addEventListener("click", function () {
+    var next = currentTheme() === "dark" ? "light" : "dark";
+    root.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) {}
   });
 
-  // Animate skill bars on scroll
-  function animateSkills() {
-    var skillsSection = $("#skills");
-    var skillsSectionTop = skillsSection.offset().top;
-    var windowHeight = $(window).height();
+  // ---------------------------------------------------------------------------
+  // Mobile menu
+  // ---------------------------------------------------------------------------
+  var menuToggle = document.getElementById("menuToggle");
+  var navLinks = document.getElementById("navLinks");
+  function setMenu(open) {
+    navLinks.classList.toggle("is-open", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+  menuToggle.addEventListener("click", function () {
+    setMenu(!navLinks.classList.contains("is-open"));
+  });
+  navLinks.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") setMenu(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setMenu(false);
+  });
 
-    if ($(window).scrollTop() > skillsSectionTop - windowHeight + 200) {
-      $(".skill-bar").each(function () {
-        var skillLevel = $(this).data("level");
-        $(this).css("width", skillLevel + "%");
+  // ---------------------------------------------------------------------------
+  // Navbar background once the page is scrolled
+  // ---------------------------------------------------------------------------
+  var nav = document.getElementById("nav");
+  var ticking = false;
+  function onScroll() {
+    nav.classList.toggle("is-scrolled", window.scrollY > 12);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
+
+  // ---------------------------------------------------------------------------
+  // Active section highlighting in the nav
+  // ---------------------------------------------------------------------------
+  var links = Array.prototype.slice.call(navLinks.querySelectorAll("a"));
+  var sections = links
+    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+    .filter(Boolean);
+
+  if ("IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) {
+          a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id);
+        });
       });
-    }
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach(function (s) { spy.observe(s); });
   }
 
-  $(window).on("scroll", animateSkills);
-
-  // Add smooth hover effect for cards
-  $(".card").hover(
-    function () {
-      $(this).find(".card-title").css("color", "#7F8C8D");
-    },
-    function () {
-      $(this).find(".card-title").css("color", "#2C3E50");
-    }
-  );
-
-  // Add click effect to buttons
-  $(".btn").on("click", function (e) {
-    var ripple = $("<span class='ripple'></span>");
-    $(this).append(ripple);
-
-    var x = e.pageX - $(this).offset().left;
-    var y = e.pageY - $(this).offset().top;
-
-    ripple.css({
-      top: y + "px",
-      left: x + "px",
+  // ---------------------------------------------------------------------------
+  // Reveal on scroll (staggered within each group)
+  // ---------------------------------------------------------------------------
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  } else {
+    reveals.forEach(function (el) {
+      var siblings = Array.prototype.filter.call(el.parentNode.children, function (c) {
+        return c.classList.contains("reveal");
+      });
+      el.style.setProperty("--d", Math.min(siblings.indexOf(el), 5) * 0.07 + "s");
     });
+    var revealer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    reveals.forEach(function (el) { revealer.observe(el); });
+  }
 
-    setTimeout(function () {
-      ripple.remove();
-    }, 600);
-  });
+  // ---------------------------------------------------------------------------
+  // NER illustration: highlight entities one after another
+  // ---------------------------------------------------------------------------
+  var nerText = document.getElementById("nerText");
+  var nerReplay = document.getElementById("nerReplay");
+  var marks = nerText.querySelectorAll("mark");
+  var timers = [];
 
-  // Preloader fade out (if you add one later)
-  $(window).on("load", function () {
-    $("body").addClass("loaded");
-  });
-});
+  function runExtraction() {
+    timers.forEach(clearTimeout);
+    timers = [];
+    marks.forEach(function (m) { m.classList.remove("is-on"); });
+    if (reduceMotion) {
+      marks.forEach(function (m) { m.classList.add("is-on"); });
+      return;
+    }
+    nerReplay.disabled = true;
+    marks.forEach(function (m, i) {
+      timers.push(setTimeout(function () { m.classList.add("is-on"); }, 400 + i * 450));
+    });
+    timers.push(setTimeout(function () { nerReplay.disabled = false; }, 400 + marks.length * 450));
+  }
+  nerReplay.addEventListener("click", runExtraction);
+
+  if ("IntersectionObserver" in window) {
+    var nerObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        runExtraction();
+        nerObserver.disconnect();
+      }
+    }, { threshold: 0.5 });
+    nerObserver.observe(nerText);
+  } else {
+    runExtraction();
+  }
+
+  // ---------------------------------------------------------------------------
+  // Footer year
+  // ---------------------------------------------------------------------------
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();

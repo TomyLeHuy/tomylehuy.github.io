@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2026-10b">
+    <link rel="stylesheet" href="styles.css?v=2026-10e">
     <script>
         // Apply the saved theme and enable reveal animations before first paint
         document.documentElement.classList.add("js");
@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
     <!-- Navigation -->
     <header class="nav" id="nav">
@@ -31,16 +31,17 @@
                 <span class="nav__name">Tomy Huy Le</span>
             </a>
             <nav class="nav__links" id="navLinks" aria-label="Main">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#thesis">Thesis</a>
-                <a href="#education">Education</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#awards">Awards</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#thesis" data-i18n="nav.thesis">Thesis</a>
+                <a href="#education" data-i18n="nav.education">Education</a>
+                <a href="#projects" data-i18n="nav.projects">Projects</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#awards" data-i18n="nav.awards">Awards</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
             <div class="nav__actions">
+                <button class="icon-btn lang-btn" id="langToggle" type="button" lang="de" aria-label="Auf Deutsch umschalten">DE</button>
                 <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
                     <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
                     <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -57,19 +58,19 @@
         <section class="hero wrap" id="top">
             <div class="hero__text">
                 <h1 class="hero__title reveal">Tomy Huy Le</h1>
-                <p class="hero__lead reveal">
+                <p class="hero__lead reveal" data-i18n="hero.lead">
                     Junior Researcher at the Institute for Information Systems (IWi) at DFKI and
                     M.Sc. Information Systems student at Saarland University.
                 </p>
-                <p class="hero__meta reveal">
+                <p class="hero__meta reveal" data-i18n="hero.meta">
                     I work on machine learning, large language models and information extraction.
                 </p>
                 <div class="hero__cta reveal">
-                    <a class="btn btn--primary" href="Resume.pdf" download>
+                    <a class="btn btn--primary" href="Resume.pdf" download data-i18n="hero.cv">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
                         Download CV
                     </a>
-                    <a class="btn btn--ghost" href="#contact">Get in touch</a>
+                    <a class="btn btn--ghost" href="#contact" data-i18n="hero.contact">Get in touch</a>
                 </div>
                 <ul class="socials reveal" aria-label="Profiles">
                     <li><a href="https://www.linkedin.com/in/tomy-huy-le-8b9774307/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -92,32 +93,32 @@
         <!-- About -->
         <section class="section wrap" id="about">
             <div class="section__head reveal">
-                <h2>About</h2>
+                <h2 data-i18n="nav.about">About</h2>
             </div>
             <div class="about">
                 <div class="about__text reveal">
-                    <p>
+                    <p data-i18n="about.p1">
                         I work as a <strong>Junior Researcher</strong> at the Institute for Information Systems (IWi) at the
                         German Research Center for Artificial Intelligence (DFKI) in Saarbrücken. This winter semester I started
                         my Master's in <strong>Information Systems</strong> at Saarland University.
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         I finished my B.Sc. in Business Informatics at Saarland University. My bachelor's thesis was about
                         extracting named entities from medical documents with large language models and was graded 1.0.
                     </p>
-                    <p>
+                    <p data-i18n="about.p3">
                         Before returning to DFKI, I did a six-month internship at Capgemini, where I worked on AI tools
                         for internal use, including integrations with Jira, Confluence, GitLab and Jenkins. Before that I was a
                         Research Assistant at the same institute and managed a family restaurant for several years.
                     </p>
                 </div>
                 <aside class="about__focus reveal" aria-label="Focus areas">
-                    <h3>Interests</h3>
+                    <h3 data-i18n="about.interests">Interests</h3>
                     <ul class="focus-list">
-                        <li><span>Large language models</span></li>
-                        <li><span>Information extraction</span></li>
-                        <li><span>Machine learning &amp; forecasting</span></li>
-                        <li><span>AI in business processes</span></li>
+                        <li data-i18n="about.i1"><span>Large language models</span></li>
+                        <li data-i18n="about.i2"><span>Information extraction</span></li>
+                        <li data-i18n="about.i3"><span>Machine learning &amp; forecasting</span></li>
+                        <li data-i18n="about.i4"><span>AI in business processes</span></li>
                     </ul>
                 </aside>
             </div>
@@ -126,71 +127,71 @@
         <!-- Experience -->
         <section class="section wrap" id="experience">
             <div class="section__head reveal">
-                <h2>Experience</h2>
+                <h2 data-i18n="nav.experience">Experience</h2>
             </div>
 
             <ol class="timeline">
                 <li class="job job--current reveal">
-                    <div class="job__when"><span class="pill pill--live">Current</span>Since 2026</div>
+                    <div class="job__when" data-i18n="exp.now.when"><span class="pill pill--live">Current</span>Since 2026</div>
                     <div class="job__body">
                         <h3>Junior Researcher</h3>
-                        <p class="job__org"><a href="https://www.dfki.de/en/web/research/research-departments/institute-for-information-systems" target="_blank" rel="noopener">Institute for Information Systems (IWi)</a> · <a href="https://www.dfki.de/en/web" target="_blank" rel="noopener">DFKI</a> · Saarbrücken</p>
-                        <p>Research on applied AI at the Institute for Information Systems, alongside my Master's studies.</p>
+                        <p class="job__org" data-i18n="exp.iwi.org"><a href="https://www.dfki.de/en/web/research/research-departments/institute-for-information-systems" target="_blank" rel="noopener">Institute for Information Systems (IWi)</a> · <a href="https://www.dfki.de/en/web" target="_blank" rel="noopener">DFKI</a> · Saarbrücken</p>
+                        <p data-i18n="exp.now.text">Research on applied AI at the Institute for Information Systems, alongside my Master's studies.</p>
                     </div>
                 </li>
 
                 <li class="job reveal">
-                    <div class="job__when">Mar 2026 – Aug 2026</div>
+                    <div class="job__when" data-i18n="exp.cap.when">Mar 2026 – Aug 2026</div>
                     <div class="job__body">
-                        <h3>Software Engineer &amp; IT Consultant Intern</h3>
+                        <h3 data-i18n="exp.cap.title">Software Engineer &amp; IT Consultant Intern</h3>
                         <p class="job__org"><a href="https://www.capgemini.com/de-de/" target="_blank" rel="noopener">Capgemini Germany GmbH</a> · Frankfurt</p>
                         <ul class="job__points">
-                            <li>Led an <strong>AI tooling team</strong> working on GenAI integrations and coordinated implementation and priorities.</li>
-                            <li>Connected <strong>OpenWebUI</strong> with Jira, Confluence, Graylog, Jenkins, GitLab and internal knowledge bases using <strong>MCP</strong> and <strong>RAG</strong>.</li>
-                            <li>Containerized and deployed AI services on <strong>OpenShift</strong>.</li>
-                            <li>Implemented a multi-user Atlassian MCP proxy with <strong>JWT</strong> and <strong>Vault</strong>, so each user keeps their own Jira and Confluence permissions.</li>
-                            <li>Built a document conversion and <strong>ingestion pipeline</strong> for RAG knowledge bases.</li>
-                            <li>Designed a <strong>multi-agent root-cause analysis</strong> that links Jenkins failures with logs, screenshots and GitLab changes.</li>
-                            <li>Presented results to business and technical stakeholders and advised management on using AI in daily work.</li>
+                            <li data-i18n="exp.cap.1">Led an <strong>AI tooling team</strong> working on GenAI integrations and coordinated implementation and priorities.</li>
+                            <li data-i18n="exp.cap.2">Connected <strong>OpenWebUI</strong> with Jira, Confluence, Graylog, Jenkins, GitLab and internal knowledge bases using <strong>MCP</strong> and <strong>RAG</strong>.</li>
+                            <li data-i18n="exp.cap.3">Containerized and deployed AI services on <strong>OpenShift</strong>.</li>
+                            <li data-i18n="exp.cap.4">Implemented a multi-user Atlassian MCP proxy with <strong>JWT</strong> and <strong>Vault</strong>, so each user keeps their own Jira and Confluence permissions.</li>
+                            <li data-i18n="exp.cap.5">Built a document conversion and <strong>ingestion pipeline</strong> for RAG knowledge bases.</li>
+                            <li data-i18n="exp.cap.6">Designed a <strong>multi-agent root-cause analysis</strong> that links Jenkins failures with logs, screenshots and GitLab changes.</li>
+                            <li data-i18n="exp.cap.7">Presented results to business and technical stakeholders and advised management on using AI in daily work.</li>
                         </ul>
                         <ul class="tags"><li>OpenWebUI</li><li>MCP</li><li>RAG</li><li>OpenShift</li><li>FastMCP</li><li>Multi-agent</li></ul>
                     </div>
                 </li>
 
                 <li class="job reveal">
-                    <div class="job__when">Nov 2024 – Mar 2026</div>
+                    <div class="job__when" data-i18n="exp.ra.when">Nov 2024 – Mar 2026</div>
                     <div class="job__body">
-                        <h3>Research Assistant</h3>
-                        <p class="job__org"><a href="https://www.dfki.de/en/web/research/research-departments/institute-for-information-systems" target="_blank" rel="noopener">Institute for Information Systems (IWi)</a> · <a href="https://www.dfki.de/en/web" target="_blank" rel="noopener">DFKI</a> · Saarbrücken</p>
+                        <h3 data-i18n="exp.ra.title">Research Assistant</h3>
+                        <p class="job__org" data-i18n="exp.iwi.org"><a href="https://www.dfki.de/en/web/research/research-departments/institute-for-information-systems" target="_blank" rel="noopener">Institute for Information Systems (IWi)</a> · <a href="https://www.dfki.de/en/web" target="_blank" rel="noopener">DFKI</a> · Saarbrücken</p>
                         <ul class="job__points">
-                            <li>Implemented an <strong>interactive dashboard</strong> for business process prediction with ML models, explainability methods (XAI) and an LLM-based chat interface.</li>
-                            <li>Developed machine learning models for industrial partners in inventory management and production.</li>
-                            <li>Built data preprocessing pipelines for <strong>time-series forecasting</strong>.</li>
-                            <li>Presented project results to the Federal Ministry of Research, Technology and Space (BMFTR) and worked on the BMWK project <strong>“GreenAI-Hub”</strong>.</li>
+                            <li data-i18n="exp.ra.1">Implemented an <strong>interactive dashboard</strong> for business process prediction with ML models, explainability methods (XAI) and an LLM-based chat interface.</li>
+                            <li data-i18n="exp.ra.2">Developed machine learning models for industrial partners in inventory management and production.</li>
+                            <li data-i18n="exp.ra.3">Built data preprocessing pipelines for <strong>time-series forecasting</strong>.</li>
+                            <li data-i18n="exp.ra.4">Presented project results to the Federal Ministry of Research, Technology and Space (BMFTR) and worked on the BMWK project <strong>“GreenAI-Hub”</strong>.</li>
                         </ul>
                         <ul class="tags"><li>Python</li><li>Scikit-Learn</li><li>XAI</li><li>LLM agents</li><li>Dash/Plotly</li></ul>
                     </div>
                 </li>
 
                 <li class="job reveal">
-                    <div class="job__when">Jan 2019 – Nov 2024</div>
+                    <div class="job__when" data-i18n="exp.zz.when">Jan 2019 – Nov 2024</div>
                     <div class="job__body">
                         <h3>Manager</h3>
                         <p class="job__org">Zen-Zen SUSHI &amp; MORE · Sankt Wendel</p>
                         <ul class="job__points">
-                            <li>Set up and maintained the cash register systems.</li>
-                            <li>Managed social media channels and advertising.</li>
-                            <li>Responsible for staff, training and customer service, and also worked in the kitchen.</li>
+                            <li data-i18n="exp.zz.1">Set up and maintained the cash register systems.</li>
+                            <li data-i18n="exp.zz.2">Managed social media channels and advertising.</li>
+                            <li data-i18n="exp.zz.3">Responsible for staff, training and customer service, and also worked in the kitchen.</li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="job reveal">
-                    <div class="job__when">Oct 2021 – Dec 2021</div>
+                    <div class="job__when" data-i18n="exp.md.when">Oct 2021 – Dec 2021</div>
                     <div class="job__body">
-                        <h3>Data Analyst (Internship)</h3>
+                        <h3 data-i18n="exp.md.title">Data Analyst (Internship)</h3>
                         <p class="job__org">Md Binco GmbH · Eschborn</p>
-                        <p>Data analysis and property management for customers.</p>
+                        <p data-i18n="exp.md.text">Data analysis and property management for customers.</p>
                     </div>
                 </li>
             </ol>
@@ -199,30 +200,30 @@
         <!-- Thesis -->
         <section class="section wrap" id="thesis">
             <div class="section__head reveal">
-                <h2>Bachelor's Thesis</h2>
+                <h2 data-i18n="thesis.title">Bachelor's Thesis</h2>
             </div>
 
             <article class="thesis reveal">
                 <div class="thesis__main">
-                    <div class="thesis__grade" aria-label="Grade 1.0">
+                    <div class="thesis__grade" aria-label="Grade 1.0" data-i18n="thesis.grade">
                         <span class="thesis__grade-num">1.0</span>
                         <span class="thesis__grade-lbl">Final grade</span>
                     </div>
-                    <p class="thesis__title">
+                    <p class="thesis__title" data-i18n="thesis.name">
                         “Extraction of Named Entities from Medical Documents Using Large Language Models —
                         Conception, Implementation and Evaluation”
                     </p>
-                    <p class="thesis__meta">Supervised by Prof. Dr. Peter Loos and Dipl.-Wirtsch.-Ing. Andreas Emrich · IWi at DFKI · Saarland University, 2026</p>
-                    <p>
+                    <p class="thesis__meta" data-i18n="thesis.meta">Supervised by Prof. Dr. Peter Loos and Dipl.-Wirtsch.-Ing. Andreas Emrich · IWi at DFKI · Saarland University, 2026</p>
+                    <p data-i18n="thesis.text">
                         The thesis compares different approaches to <strong>Named Entity Recognition</strong> for
                         pharmacovigilance (drug safety monitoring). The models were evaluated on PVRadarKG, a dataset
                         with 19 entity types, with the goal of filling a knowledge graph from clinical texts.
                     </p>
                     <ul class="thesis__findings">
-                        <li>Fine-tuned encoders (PubMedBERT, BioBERT) achieved the best overall results.</li>
-                        <li>Medium-sized open LLMs such as Gemma-3-27B performed similarly to 70B models when their output was structured with frameworks like LangExtract.</li>
-                        <li>The zero-shot model GLiNER worked well without task-specific training.</li>
-                        <li>A normalization pipeline, hallucination filtering and a risk-weighted F<sub>ω</sub> score were used to compare the models.</li>
+                        <li data-i18n="thesis.f1">Fine-tuned encoders (PubMedBERT, BioBERT) achieved the best overall results.</li>
+                        <li data-i18n="thesis.f2">Medium-sized open LLMs such as Gemma-3-27B performed similarly to 70B models when their output was structured with frameworks like LangExtract.</li>
+                        <li data-i18n="thesis.f3">The zero-shot model GLiNER worked well without task-specific training.</li>
+                        <li data-i18n="thesis.f4">A normalization pipeline, hallucination filtering and a risk-weighted F<sub>ω</sub> score were used to compare the models.</li>
                     </ul>
                     <ul class="tags"><li>NER</li><li>LLMs</li><li>PubMedBERT</li><li>GLiNER</li><li>LangExtract</li><li>Knowledge Graphs</li><li>Pharmacovigilance</li></ul>
                 </div>
@@ -230,10 +231,10 @@
                 <!-- Live NER illustration -->
                 <div class="ner" aria-label="Illustration: entities extracted from a clinical sentence">
                     <div class="ner__bar">
-                        <span class="ner__file">Example</span>
-                        <button class="ner__replay" id="nerReplay" type="button">Replay</button>
+                        <span class="ner__file" data-i18n="ner.label">Example</span>
+                        <button class="ner__replay" id="nerReplay" type="button" data-i18n="ner.replay">Replay</button>
                     </div>
-                    <p class="ner__text" id="nerText">
+                    <p class="ner__text" id="nerText" data-i18n="ner.text">
                         A 67-year-old female patient started
                         <mark data-label="DRUG">amoxicillin</mark>
                         <mark data-label="DOSE">500 mg</mark> three times daily for
@@ -243,12 +244,12 @@
                         <mark data-label="ADR">pruritus</mark>; the drug was discontinued.
                     </p>
                     <ul class="ner__legend">
-                        <li data-label="DRUG">Drug</li>
-                        <li data-label="DOSE">Dosage</li>
-                        <li data-label="INDICATION">Indication</li>
-                        <li data-label="ADR">Adverse reaction</li>
+                        <li data-label="DRUG" data-i18n="ner.l1">Drug</li>
+                        <li data-label="DOSE" data-i18n="ner.l2">Dosage</li>
+                        <li data-label="INDICATION" data-i18n="ner.l3">Indication</li>
+                        <li data-label="ADR" data-i18n="ner.l4">Adverse reaction</li>
                     </ul>
-                    <p class="ner__note">Example sentence, not from the thesis data.</p>
+                    <p class="ner__note" data-i18n="ner.note">Example sentence, not from the thesis data.</p>
                 </div>
             </article>
         </section>
@@ -256,32 +257,32 @@
         <!-- Education -->
         <section class="section wrap" id="education">
             <div class="section__head reveal">
-                <h2>Education</h2>
+                <h2 data-i18n="nav.education">Education</h2>
             </div>
             <div class="edu">
                 <article class="edu__card edu__card--now reveal">
-                    <span class="pill pill--live">In progress</span>
+                    <span class="pill pill--live" data-i18n="edu.now">In progress</span>
                     <h3>M.Sc. Information Systems</h3>
-                    <p class="edu__org">Saarland University</p>
-                    <p>Since winter semester 2026/27.</p>
+                    <p class="edu__org" data-i18n="edu.uds">Saarland University</p>
+                    <p data-i18n="edu.msc.text">Since winter semester 2026/27.</p>
                 </article>
                 <article class="edu__card reveal">
-                    <span class="pill">Apr 2023 – Apr 2026</span>
-                    <h3>B.Sc. Business Informatics</h3>
-                    <p class="edu__org">Saarland University</p>
-                    <p>Specialization in software engineering and artificial intelligence. Thesis graded <strong>1.0</strong>.</p>
+                    <span class="pill" data-i18n="edu.bsc.when">Apr 2023 – Apr 2026</span>
+                    <h3 data-i18n="edu.bsc.title">B.Sc. Business Informatics</h3>
+                    <p class="edu__org" data-i18n="edu.uds">Saarland University</p>
+                    <p data-i18n="edu.bsc.text">Specialization in software engineering and artificial intelligence. Thesis graded <strong>1.0</strong>.</p>
                 </article>
                 <article class="edu__card reveal">
-                    <span class="pill">Apr 2022 – Mar 2023</span>
-                    <h3>B.Sc. Computer Science</h3>
-                    <p class="edu__org">Saarland University</p>
-                    <p>Transferred to Business Informatics.</p>
+                    <span class="pill" data-i18n="edu.cs.when">Apr 2022 – Mar 2023</span>
+                    <h3 data-i18n="edu.cs.title">B.Sc. Computer Science</h3>
+                    <p class="edu__org" data-i18n="edu.uds">Saarland University</p>
+                    <p data-i18n="edu.cs.text">Transferred to Business Informatics.</p>
                 </article>
                 <article class="edu__card reveal">
-                    <span class="pill">Aug 2013 – Jun 2021</span>
+                    <span class="pill" data-i18n="edu.abi.when">Aug 2013 – Jun 2021</span>
                     <h3>Abitur</h3>
                     <p class="edu__org">Illtal-Gymnasium Illingen</p>
-                    <p>Graduated with a grade of <strong>1.5</strong>.</p>
+                    <p data-i18n="edu.abi.text">Graduated with a grade of <strong>1.5</strong>.</p>
                 </article>
             </div>
         </section>
@@ -289,37 +290,37 @@
         <!-- Projects -->
         <section class="section wrap" id="projects">
             <div class="section__head reveal">
-                <h2>Projects</h2>
+                <h2 data-i18n="nav.projects">Projects</h2>
             </div>
             <div class="projects">
                 <article class="project reveal">
                     <div class="project__img"><img src="images/projects/dashboard.png" alt="Demand forecasting dashboard" loading="lazy"></div>
                     <div class="project__body">
-                        <span class="project__date">Jul 2025 – Aug 2025</span>
-                        <h3>Demand Forecasting Dashboard</h3>
-                        <p>A reusable demand forecasting dashboard with real-time stock movement simulation.</p>
+                        <span class="project__date" data-i18n="proj.dash.when">Jul 2025 – Aug 2025</span>
+                        <h3 data-i18n="proj.dash.title">Demand Forecasting Dashboard</h3>
+                        <p data-i18n="proj.dash.text">A reusable demand forecasting dashboard with real-time stock movement simulation.</p>
                         <ul class="tags"><li>Python</li><li>Dash/Plotly</li><li>Scikit-Learn</li></ul>
-                        <a class="link-arrow" href="https://gitlab-iwi.dfki.de/students/pa-2025-tomyle/-/tree/v1.0?ref_type=tags" target="_blank" rel="noopener">Technical details</a>
+                        <a class="link-arrow" href="https://gitlab-iwi.dfki.de/students/pa-2025-tomyle/-/tree/v1.0?ref_type=tags" target="_blank" rel="noopener" data-i18n="proj.dash.link">Technical details</a>
                     </div>
                 </article>
                 <article class="project reveal">
                     <div class="project__img"><img src="images/projects/tixicity.png" alt="Comment toxicity model" loading="lazy"></div>
                     <div class="project__body">
-                        <span class="project__date">Jul 2024 – Oct 2024</span>
-                        <h3>Comment Toxicity Model</h3>
-                        <p>A sentiment analysis model that detects different levels of toxicity in user comments, with a Django web app.</p>
+                        <span class="project__date" data-i18n="proj.tox.when">Jul 2024 – Oct 2024</span>
+                        <h3 data-i18n="proj.tox.title">Comment Toxicity Model</h3>
+                        <p data-i18n="proj.tox.text">A sentiment analysis model that detects different levels of toxicity in user comments, with a Django web app.</p>
                         <ul class="tags"><li>Python</li><li>TensorFlow</li><li>Django</li></ul>
-                        <a class="link-arrow" href="https://github.com/TomyLeHuy/toxicity_model" target="_blank" rel="noopener">View repository</a>
+                        <a class="link-arrow" href="https://github.com/TomyLeHuy/toxicity_model" target="_blank" rel="noopener" data-i18n="proj.repo">View repository</a>
                     </div>
                 </article>
                 <article class="project reveal">
                     <div class="project__img"><img src="images/projects/1.png" alt="Ultimate Tic Tac Toe board" loading="lazy"></div>
                     <div class="project__body">
-                        <span class="project__date">Jun 2023 – Jul 2023</span>
+                        <span class="project__date" data-i18n="proj.uttt.when">Jun 2023 – Jul 2023</span>
                         <h3>Ultimate Tic Tac Toe</h3>
-                        <p>An extended version of Tic Tac Toe with more complex game mechanics, built in my Programming 2 course.</p>
+                        <p data-i18n="proj.uttt.text">An extended version of Tic Tac Toe with more complex game mechanics, built in my Programming 2 course.</p>
                         <ul class="tags"><li>Java</li><li>OOP</li></ul>
-                        <a class="link-arrow" href="https://github.com/TomyLeHuy/UTTT" target="_blank" rel="noopener">View repository</a>
+                        <a class="link-arrow" href="https://github.com/TomyLeHuy/UTTT" target="_blank" rel="noopener" data-i18n="proj.repo">View repository</a>
                     </div>
                 </article>
             </div>
@@ -328,70 +329,70 @@
         <!-- Skills -->
         <section class="section wrap" id="skills">
             <div class="section__head reveal">
-                <h2>Skills</h2>
+                <h2 data-i18n="nav.skills">Skills</h2>
             </div>
             <div class="skills">
                 <div class="skill-group reveal">
-                    <h3>Machine Learning &amp; AI</h3>
-                    <ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>Scikit-Learn</li><li>Hugging Face Transformers</li><li>Time-Series Forecasting</li><li>Explainable AI (XAI)</li></ul>
+                    <h3 data-i18n="skills.ml">Machine Learning &amp; AI</h3>
+                    <ul class="chips" data-i18n="skills.ml.list"><li>PyTorch</li><li>TensorFlow</li><li>Scikit-Learn</li><li>Hugging Face Transformers</li><li>Time-Series Forecasting</li><li>Explainable AI (XAI)</li></ul>
                 </div>
                 <div class="skill-group reveal">
                     <h3>LLMs &amp; NLP</h3>
-                    <ul class="chips"><li>Large Language Models</li><li>Named Entity Recognition</li><li>Information Extraction</li><li>Prompt Engineering</li><li>LLM Evaluation</li></ul>
+                    <ul class="chips" data-i18n="skills.llm.list"><li>Large Language Models</li><li>Named Entity Recognition</li><li>Information Extraction</li><li>Prompt Engineering</li><li>LLM Evaluation</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Generative AI Integration</h3>
-                    <ul class="chips"><li>Retrieval-Augmented Generation (RAG)</li><li>Model Context Protocol (FastMCP)</li><li>Multi-Agent Systems</li><li>OpenWebUI</li></ul>
+                    <h3 data-i18n="skills.gen">Generative AI Integration</h3>
+                    <ul class="chips" data-i18n="skills.gen.list"><li>Retrieval-Augmented Generation (RAG)</li><li>Model Context Protocol (FastMCP)</li><li>Multi-Agent Systems</li><li>OpenWebUI</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Software Development</h3>
+                    <h3 data-i18n="skills.dev">Software Development</h3>
                     <ul class="chips"><li>Python</li><li>Java</li><li>Django</li><li>Dash/Plotly</li><li>HTML/CSS</li><li>JavaScript</li><li>Git</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Deployment &amp; Operations</h3>
-                    <ul class="chips"><li>Red Hat OpenShift</li><li>Containerization</li><li>Data Pipelines</li><li>Secrets Management (Vault)</li><li>JWT Authentication</li></ul>
+                    <h3 data-i18n="skills.ops">Deployment &amp; Operations</h3>
+                    <ul class="chips" data-i18n="skills.ops.list"><li>Red Hat OpenShift</li><li>Containerization</li><li>Data Pipelines</li><li>Secrets Management (Vault)</li><li>JWT Authentication</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Professional Skills</h3>
-                    <ul class="chips"><li>Team Leadership</li><li>Stakeholder Communication</li><li>IT Consulting</li><li>Requirements Analysis</li><li>Training &amp; Instruction (IHK)</li></ul>
+                    <h3 data-i18n="skills.pro">Professional Skills</h3>
+                    <ul class="chips" data-i18n="skills.pro.list"><li>Team Leadership</li><li>Stakeholder Communication</li><li>IT Consulting</li><li>Requirements Analysis</li><li>Training &amp; Instruction (IHK)</li></ul>
                 </div>
             </div>
             <div class="skills-row">
                 <div class="skill-group reveal">
-                    <h3>Languages</h3>
-                    <ul class="langs langs--row">
+                    <h3 data-i18n="skills.lang">Languages</h3>
+                    <ul class="langs langs--row" data-i18n="skills.lang.list">
                         <li><span>German</span><span>Native</span></li>
                         <li><span>Vietnamese</span><span>Native</span></li>
                         <li><span>English</span><span>Fluent</span></li>
                     </ul>
                 </div>
             </div>
-            <p class="hobbies reveal">Hobbies: <span>Basketball</span> · <span>Weight lifting</span> · <span>Boxing</span></p>
+            <p class="hobbies reveal" data-i18n="skills.hobbies">Hobbies: <span>Basketball</span> · <span>Weight lifting</span> · <span>Boxing</span></p>
         </section>
 
         <!-- Awards & Certificates -->
         <section class="section wrap" id="awards">
             <div class="section__head reveal">
-                <h2>Awards &amp; Certificates</h2>
+                <h2 data-i18n="awards.title">Awards &amp; Certificates</h2>
             </div>
             <div class="awards">
                 <a class="award reveal" href="KIU.pdf" target="_blank" rel="noopener">
-                    <span class="award__date">Jan 2025</span>
-                    <h3>Best AI Project</h3>
+                    <span class="award__date" data-i18n="awards.kiu.when">Jan 2025</span>
+                    <h3 data-i18n="awards.kiu.title">Best AI Project</h3>
                     <p>ISS Saarbrücken, Prof. Dr.-Ing. Wolfgang Maaß</p>
-                    <span class="link-arrow">View certificate</span>
+                    <span class="link-arrow" data-i18n="awards.view">View certificate</span>
                 </a>
                 <a class="award reveal" href="Consulting_Certificate.pdf" target="_blank" rel="noopener">
-                    <span class="award__date">Nov 2024 – Feb 2025</span>
-                    <h3>Consulting Certificate</h3>
-                    <p>IWi at DFKI Saarbrücken</p>
-                    <span class="link-arrow">View certificate</span>
+                    <span class="award__date" data-i18n="awards.cons.when">Nov 2024 – Feb 2025</span>
+                    <h3 data-i18n="awards.cons.title">Consulting Certificate</h3>
+                    <p data-i18n="awards.cons.org">IWi at DFKI Saarbrücken</p>
+                    <span class="link-arrow" data-i18n="awards.view">View certificate</span>
                 </a>
                 <a class="award reveal" href="IHK_Zeugnis.pdf" target="_blank" rel="noopener">
                     <span class="award__date">Nov 2024</span>
-                    <h3>Instructor Certificate</h3>
+                    <h3 data-i18n="awards.ihk.title">Instructor Certificate</h3>
                     <p>IHK Saarbrücken</p>
-                    <span class="link-arrow">View certificate</span>
+                    <span class="link-arrow" data-i18n="awards.view">View certificate</span>
                 </a>
             </div>
         </section>
@@ -400,14 +401,14 @@
         <section class="section wrap" id="contact">
             <div class="contact reveal">
                 <div class="contact__intro">
-                    <h2>Contact</h2>
-                    <p>Feel free to reach out by email or on LinkedIn.</p>
+                    <h2 data-i18n="nav.contact">Contact</h2>
+                    <p data-i18n="contact.text">Feel free to reach out by email or on LinkedIn.</p>
                 </div>
                 <dl class="contact__list">
-                    <div><dt>Email</dt><dd><a href="mailto:tomyle49@gmail.com">tomyle49@gmail.com</a></dd></div>
+                    <div><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:tomyle49@gmail.com">tomyle49@gmail.com</a></dd></div>
                     <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/tomy-huy-le-8b9774307/" target="_blank" rel="noopener">Tomy Huy Le</a></dd></div>
                     <div><dt>GitHub</dt><dd><a href="https://github.com/TomyLeHuy" target="_blank" rel="noopener">TomyLeHuy</a></dd></div>
-                    <div><dt>Documents</dt><dd><a href="Resume.pdf" download>CV (PDF)</a> · <a href="AktuellesDatenblatt.pdf" download>Transcript (PDF)</a></dd></div>
+                    <div><dt data-i18n="contact.docs">Documents</dt><dd data-i18n="contact.docs.list"><a href="Resume.pdf" download>CV (PDF)</a> · <a href="AktuellesDatenblatt.pdf" download>Transcript (PDF)</a></dd></div>
                 </dl>
             </div>
         </section>
@@ -415,9 +416,10 @@
 
     <footer class="footer wrap">
         <p>© <span id="year">2026</span> Tomy Huy Le</p>
-        <a href="#top" class="footer__top">Back to top ↑</a>
+        <a href="#top" class="footer__top" data-i18n="footer.top">Back to top ↑</a>
     </footer>
 
-    <script src="scripts.js?v=2026-10b"></script>
+    <script src="i18n.js?v=2026-10e"></script>
+    <script src="scripts.js?v=2026-10e"></script>
 </body>
 </html>

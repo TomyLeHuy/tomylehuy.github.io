@@ -373,8 +373,6 @@ svg.fill { fill: currentColor; stroke: none; }
 /* Skills */
 .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .skills-row { margin-top: 16px; }
-.langs--row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px; }
-.langs--row li, .langs--row li:first-child { border-top: 0; padding: 0; }
 .skill-group { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
 .skill-group h3 { font-size: 15px; margin-bottom: 16px; }
 .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -382,10 +380,9 @@ svg.fill { fill: currentColor; stroke: none; }
   font-size: 14px; padding: 5px 10px; border-radius: 6px;
   background: var(--surface-2); color: var(--ink);
 }
-.langs { list-style: none; }
-.langs li { display: flex; justify-content: space-between; padding: 9px 0; border-top: 1px solid var(--line); font-size: 15px; }
-.langs li:first-child { border-top: 0; padding-top: 0; }
-.langs li span:last-child { color: var(--ink-3); font-family: var(--font-mono); font-size: 12.5px; }
+.langs { list-style: none; display: flex; flex-wrap: wrap; gap: 12px 48px; }
+.langs li { display: flex; flex-direction: column; font-size: 15px; font-weight: 500; }
+.langs li span:last-child { color: var(--ink-3); font-size: 14px; font-weight: 400; }
 .hobbies { margin-top: 24px; color: var(--ink-3); font-size: 15px; }
 .hobbies span { color: var(--ink-2); }
 
@@ -461,9 +458,6 @@ svg.fill { fill: currentColor; stroke: none; }
   .ner { position: static; }
   .thesis { grid-template-columns: 1fr; }
   .edu, .skills { grid-template-columns: repeat(2, 1fr); }
-  .langs--row { grid-template-columns: 1fr; gap: 0; }
-  .langs--row li { padding: 9px 0; border-top: 1px solid var(--line); }
-  .langs--row li:first-child { border-top: 0; padding: 0 0 9px; }
   .projects { grid-template-columns: repeat(2, 1fr); }
   .contact { grid-template-columns: 1fr; gap: 24px; }
 }

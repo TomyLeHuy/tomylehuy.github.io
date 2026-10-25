@@ -21,7 +21,7 @@ window.I18N_DE = {
   "about.i2": "<span>Informationsextraktion</span>",
   "about.i3": "<span>Maschinelles Lernen &amp; Prognosen</span>",
   "about.i4": "<span>KI in Geschäftsprozessen</span>",
-  "exp.now.when": "<span class=\"pill pill--live\">Aktuell</span>Seit 2026",
+  "exp.now.when": "<span class=\"pill pill--live\">Aktuell</span>Seit Okt. 2026",
   "exp.iwi.org": "<a href=\"https://www.dfki.de/en/web/research/research-departments/institute-for-information-systems\" target=\"_blank\" rel=\"noopener\">Institut für Wirtschaftsinformatik (IWi)</a> · <a href=\"https://www.dfki.de/en/web\" target=\"_blank\" rel=\"noopener\">DFKI</a> · Saarbrücken",
   "exp.now.text": "Forschung zu angewandter KI am Institut für Wirtschaftsinformatik, neben meinem Masterstudium.",
   "exp.cap.when": "März 2026 – Aug. 2026",
